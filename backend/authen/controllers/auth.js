@@ -1,10 +1,10 @@
 const { validationResult } = require("express-validator");
 const { compare } = require("../../helpers/password");
 const { generate } = require("../../helpers/token");
-const { findUserByEmail } = require("../repository");
-const { AuthError } = require("../constants");
+const AuthRepository = require("../repository");
+const { AuthErrorMessage } = require("../constants");
 
-const login = async (req, res) => {
+const login = (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
@@ -12,13 +12,13 @@ const login = async (req, res) => {
 
   const { email, password } = req.body;
 
-  const userByEmail = findUserByEmail(email);
+  const userByEmail = AuthRepository.findUserByEmail(email);
 
   if (!userByEmail) {
     return res.status(401).json({
       errors: [
         {
-          msg: `${email} ${AuthError.USER_NOT_EXIST}`,
+          msg: `${email} ${AuthErrorMessage.USER_NOT_EXIST}`,
         },
       ],
     });
@@ -29,7 +29,7 @@ const login = async (req, res) => {
     return res.status(401).json({
       errors: [
         {
-          msg: AuthError.USER_INFO_WRONG,
+          msg: AuthErrorMessage.USER_INFO_WRONG,
         },
       ],
     });
