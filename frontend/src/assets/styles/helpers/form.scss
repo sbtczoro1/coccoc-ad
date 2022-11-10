@@ -1,0 +1,9 @@
+@import "../base/variables";
+
+.error {
+  color: $color-error;
+
+  svg {
+    fill: $color-error;
+  }
+}

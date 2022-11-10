@@ -1,0 +1,25 @@
+{
+  "login": {
+    "heading": "Login",
+    "dont_have_account": "Do not have an account?",
+    "sign_up_here": "Sign up here",
+    "email": "Email",
+    "password": "Password",
+    "remember_me": "Remember my account",
+    "forgot_password": "Forgot password",
+    "login": "Login",
+    "processing": "Processing...",
+    "placeholder": {
+      "email": "email@example.com",
+      "password": "Enter your password"
+    },
+    "validate": {
+      "required": "Required",
+      "account_in_correct": "Account info incorrect"
+    }
+  },
+  "home": {
+    "welcome": "Welcome",
+    "logged_in": "you have logged in successfully"
+  }
+}

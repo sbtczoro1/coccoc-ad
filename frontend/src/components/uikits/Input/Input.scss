@@ -1,0 +1,19 @@
+@import "@styles/base/_variables.scss";
+
+input {
+  outline: 0;
+  border: 1px solid $color-border;
+  padding: 4px 12px;
+  border-radius: $border-radius;
+  line-height: 22px;
+  width: 100%;
+  font-family: $font-base;
+}
+
+input:not(:placeholder-shown) {
+  border-color: $border-input-active;
+}
+
+input.error {
+  border: 1px solid $color-green;
+}

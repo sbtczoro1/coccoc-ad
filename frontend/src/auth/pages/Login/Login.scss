@@ -1,0 +1,19 @@
+@import "@styles/base/_variables.scss";
+@import "@styles/mixins/flexbox.scss";
+
+.login-page {
+  width: $dialog-width;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  flex-flow: column;
+
+  @include flexCenter();
+
+  > div {
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    padding: 32px 24px;
+    width: 100%;
+  }
+}

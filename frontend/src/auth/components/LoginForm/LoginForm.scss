@@ -1,0 +1,35 @@
+@import "@styles/base/_variables.scss";
+
+.login-form {
+  .remember {
+    cursor: pointer;
+
+    svg {
+      fill: $color-svg-default;
+    }
+
+    svg.checked {
+      fill: $color-green;
+    }
+  }
+
+  .password-field {
+    position: relative;
+
+    .password-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 12px;
+
+      cursor: pointer;
+    }
+
+    svg.show {
+      fill: $color-black;
+    }
+    svg.hide {
+      fill: $color-svg-default;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+$spacings: 4, 8, 12, 16, 20, 24, 28;
+$directions: (
+  "top": "t",
+  "right": "r",
+  "bottom": "b",
+  "left": "l",
+);
+
+@each $spacing in $spacings {
+  @each $direction, $name in $directions {
+    .m#{$name}-#{$spacing} {
+      margin-#{$direction}: #{$spacing}px;
+    }
+  }
+}

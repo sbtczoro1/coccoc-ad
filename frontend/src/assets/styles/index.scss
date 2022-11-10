@@ -1,0 +1,21 @@
+@import "./base/index.scss";
+@import "./mixins/index.scss";
+@import "./helpers/index.scss";
+
+.logged-in {
+  width: fit-content;
+  height: 100%;
+  margin: 0 auto;
+  @include flexCenter();
+
+  &__message {
+    border: 1px solid $color-green;
+    padding: 16px;
+    border-radius: $border-radius;
+    @include flexCenter();
+  }
+
+  svg {
+    fill: $color-green;
+  }
+}

@@ -11,7 +11,6 @@ const login = (req, res) => {
   }
 
   const { email, password } = req.body;
-
   const userByEmail = AuthRepository.findUserByEmail(email);
 
   if (!userByEmail) {
