@@ -59,7 +59,7 @@ In the second terminal
 - Supply the following credentials
 
 ```
-PORT = 1911
+PORT=1911
 SECRET_TOKEN=coccocad@secret!token
 ```
 
